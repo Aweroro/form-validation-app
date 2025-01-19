@@ -4,7 +4,6 @@ import React from "react";
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
 
-
 interface FormProps{
     name: string;
     email: string;
@@ -36,17 +35,18 @@ interface FormProps{
     console.log(formik);
 
     return(
-        <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto p-4 ">
+        <form onSubmit={formik.handleSubmit} className="max-w-4xl mx-auto p-4 ">
             <div className="mb-4">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
                 <input
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                id="name"
-                name="name"
-                type="text"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.name}/>
+                    className="mt-1 block w-full px-3 py-2 text-gray-600 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    id="name"
+                    name="name"
+                    type="text"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.name}
+                />
                 {formik.touched.name && formik.errors.name ? (
                     <div className="text-red-400 text-sm">{formik.errors.name}</div>
                 ): null}
@@ -55,13 +55,14 @@ interface FormProps{
             <div className="mb-4">
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
                 <input
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                id="email"
-                name="email"
-                type="email"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.email}/>
+                    className="mt-1 block w-full px-3 text-gray-600 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    id="email"
+                    name="email"
+                    type="email"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.email}
+                />
                 {formik.touched.email && formik.errors.email ? (
                     <div className="text-red-400 text-sm">{formik.errors.email}</div>
                 ): null}
@@ -70,13 +71,14 @@ interface FormProps{
             <div className="mb-4">
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
                 <input
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                id="password"
-                name="password"
-                type="password"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.password}/>
+                    className="mt-1 block text-gray-600 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    id="password"
+                    name="password"
+                    type="password"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.password}
+                />
                 {formik.touched.password && formik.errors.password ? (
                     <div className="text-red-400 text-sm">{formik.errors.password}</div>
                 ): null}
@@ -85,13 +87,14 @@ interface FormProps{
             <div className="mb-4">
                 <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">Confirm Password</label>
                 <input
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                id="confirmPassword"
-                name="confirmPassword"
-                type="password"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.confirmPassword}/>
+                    className="mt-1 block text-gray-600 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    type="password"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.confirmPassword}
+                />
                 {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
                     <div className="text-red-400 text-sm">{formik.errors.confirmPassword}</div>
                 ): null}
