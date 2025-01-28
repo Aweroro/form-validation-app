@@ -35,7 +35,7 @@ interface FormProps{
     console.log(formik);
 
     return(
-        <form onSubmit={formik.handleSubmit} className="max-w-4xl mx-auto p-4 ">
+        <form onSubmit={formik.handleSubmit} className="border shadow max-w-4xl mx-auto p-4 ">
             <div className="mb-4">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
                 <input
@@ -103,7 +103,7 @@ interface FormProps{
             <div>
                 <button
                 type="submit"
-                className="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Submit</button>
+                className="bg-gray-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Submit</button>
             </div>
         </form>
     )
